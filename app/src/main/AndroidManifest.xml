@@ -15,8 +15,12 @@
             android:name=".SecondActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="OPEN_SECOND_ACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fcmtest"
+                    android:host="second" />
             </intent-filter>
         </activity>
         <activity

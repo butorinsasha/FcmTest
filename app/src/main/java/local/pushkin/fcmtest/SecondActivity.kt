@@ -17,15 +17,17 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        Log.d("SecondActivity", "Intent = $intent")
-        Log.d("SecondActivity", "Extras = ${intent.extras}")
-        Log.d("SecondActivity", "Extras = ${intent.data}")
+        Log.d(TAG, "Intent = $intent")
+        Log.d(TAG, "Extras = ${intent.extras}")
+        Log.d(TAG, "URI = ${intent.data}")
 
         val userId = intent.getStringExtra("userId")
         val screen = intent.getStringExtra("screen")
+        val deepLink = intent.getStringExtra("deep_link")
 
         Log.d(TAG, "userId = $userId")
         Log.d(TAG, "screen = $screen")
+        Log.d(TAG, "deep_link = $deepLink")
 
     }
 }
